@@ -8,8 +8,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :plans do
-    end
-  
+  # Rails.application.routes.draw do
+  #   get 'plans/calendar' => 'plans#calendar'
+    # get '/blue_plan/calendar', to: 'blue_plan#calendar'
+
+  Rails.application.routes.draw do
+    get 'plans' => 'plans#index'
+    get 'plans/new' => 'plans#new'
+    get 'plans/calendar' => 'plans#calendar'
+  end
+    
   
 end
